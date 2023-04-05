@@ -1,6 +1,6 @@
 import User from "./User";
 
-export default class Student extends User {
+export class Student extends User {
     constructor(
         name: string,
         email: string,

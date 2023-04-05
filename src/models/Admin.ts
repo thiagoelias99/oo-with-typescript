@@ -1,6 +1,6 @@
 import User from "./User";
 
-export default class Admin extends User {
+export class Admin extends User {
     constructor(
         name: string,
         email: string,
@@ -12,6 +12,14 @@ export default class Admin extends User {
 
     createCourse(courseName: string, vacancies: number) {
         return `Course ${courseName} created with ${vacancies} vacancies.`;
+    }
+
+    set active(isActive: boolean){
+        this.__active = isActive;
+    }
+
+    set role(newRole: string){
+        this.__role = newRole;
     }
 
     static description(){

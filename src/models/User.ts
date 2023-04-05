@@ -1,13 +1,21 @@
 export default abstract class User {
     constructor(
-        public name: string,
-        public email: string,
-        public birthDate: Date,
-        public role: string,
-        public ative = true
+        readonly name: string,
+        private _email: string,
+        readonly _birthDate: Date,
+        protected __role: string,
+        protected __active = true
     ) { }
 
-    showInformations(){
+    get email(){
+        return this._email;
+    }
+
+    get active(){
+        return this.__active;
+    }
+
+    showInformation(){
         return `${this.name}, ${this.email}`;
     }
 }

@@ -1,6 +1,4 @@
-import Admin from "./models/Admin";
-import Teacher from "./models/Teacher";
-import Student from "./models/Student";
+import { Admin, Teacher, Student } from "./models/";
 
 const sara = new Student(
     "Sara",
@@ -20,7 +18,8 @@ const bia = new Teacher(
     new Date("2098-05-17"),
 );
 
-console.log(sara.showInformations());
+console.log(sara.showInformation());
 console.log(Admin.description());
-console.log(ana.createCourse("Math",1));
+console.log(ana.createCourse("Math", 1));
 console.log(bia.approveStudent("Sara", "Math"));
+console.log(sara.name);

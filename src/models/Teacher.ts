@@ -1,6 +1,6 @@
 import User from "./User";
 
-export default class Teacher extends User {
+export class Teacher extends User {
     constructor(
         name: string,
         email: string,
